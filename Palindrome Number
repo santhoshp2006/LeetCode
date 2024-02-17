@@ -1,0 +1,19 @@
+/*Given an integer x, return true if x is a palindrome, and false otherwise.*/
+
+class Solution {
+    public boolean isPalindrome(int x) 
+    {
+        int reminder = 0, y = 0, temp = x; 
+        while(x > 0)
+        {
+          reminder = x % 10;
+          y = (y * 10) + reminder;
+          x = x / 10;
+        }
+
+        if(y == temp)
+          return true;          
+
+        return false;
+    }
+}
